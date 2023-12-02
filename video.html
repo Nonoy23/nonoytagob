@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <link rel="stylesheet" href="st.css">
+</head>
+<style>
+    header{
+        font-size: 90px;
+        text-align: center;
+        font-style: sans serif;
+        font-weight: bold;
+    }
+</style>
+<body>
+    <header>3X A DAY MANGAPI</header>
+    <div class="video">
+        <video src="video0.mp4"</video>
+    </div>
+    
+    <script>
+        var video = document.querySelectorAll('video')
+        
+        video.forEach(play => play.addEventListener('click', () => {
+            play.classList.toggle('active');
+            if(play.paused) {
+                play.play()
+            }else{
+                play.paused();
+                play.currentTime = 0;
+            }
+        }));
+    </script>
+</body>
+</html>
